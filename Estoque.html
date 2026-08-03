@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title> Painel de Gestão de Estoque</title>
+</head>
+<body>
+    
+    <header>
+        <h1> Centro de Distribuição - Controle de Estoque </h1>
+        <hr>
+    
+    </header>
+
+    <aside>
+        <h3> Menu do Sistema </h3>
+        <ul>
+            <li><a href="#"> Visão Geral </a></li>
+            <li><a href="#"> Entrada e Materiais </a></li>
+            <li><a href="#"> Iventário </a></li>
+            <li><a href="#"> Relatórios </a></li>
+        </ul>
+        <hr>
+    </aside>
+
+    <main>
+        <section>
+            <h2> Cadastrar novo item no estoque </h2>
+            <form>
+                <label for="sku">Código SKU:</label><br>
+                <input type="text" id="sku" placeholder="Ex: ELE-001" required><br><br>
+
+                <label for="produto"> Nome do Produto:</label><br>
+                <input type="text" id="produto" placeholder="Nome do item" required><br><br>
+
+                <label for="categoria"> Categoria:</label><br>
+                <select id="categoria" required>
+                    <option value="">Selecione uma categoria...</option>
+                    <option value="eletronicos">Eletronicos</option>
+                    <option value="ferramentas">Ferramentas</option>
+                    <option value="embalagens">Embalagens</option>
+                    <option value="escritorio">Escritorio</option>
+                </select><br><br>
+
+                <label for="quantidade">Quantidade:</label><br>
+                <input type="number" id="quantidade" min="1" required><br><br>
+
+                <label for="preço">Preço Unitário:</label><br>
+                <input type="number" id="preço" step="0.01" placeholder="0.00" required><br><br>
+
+                <label for="data de recebimento">Data de Recebimento:</label><br>
+                <input type="date" id="data_recebimento" required><br><br>
+
+                <button type="submit">Cadastrar Item:</button>
+                <button type="reset">Limpar Campos</button>
+
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2> Iventario atual</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th> SKU </th>
+                        <th> Item </th>
+                        <th> Categoria </th>
+                        <th> Qtd em Estoque </th>
+                        <th> Preço Unitários </th>
+                        <th> Status </th>
+
+                    </tr>
+                </thead>
+                <tr>
+                    <tr> ELE-102</tr>
+                    <td> Teclado usb</td>
+                    <td> Eletronicos</td>
+                    <td> 20</td>
+                    <td> R$210,00</td>
+                    <td> Disponivel</td>
+                </tr>
+                <tr>
+                    <tr> ELE-103</tr>
+                    <td> Jogo de ferramentas</td>
+                    <td> Ferramentas</td>
+                    <td> 12</td>
+                    <td> R$85,00</td>
+                    <td> Disponivel</td>
+                </tr>
+                <tr>
+                    <tr> ELE-105</tr>
+                    <td> Caixa de Papelão 6</td>
+                    <td> Embalagens</td>
+                    <td> 300</td>
+                    <td> R$4,50</td>
+                    <td> Disponivel</td>
+                </tr>
+                <tr>
+                    <tr> ELE-108</tr>
+                    <td> Papel A4</td>
+                    <td> Escritórios</td>
+                    <td> 80</td>
+                    <td> R$28,00</td>
+                    <td> Disponivel</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><strong> Total geral acumulado em estoque:</strong></td>
+                    </tr>
+                </tfoot>
+        </section>
+
+
+
+
+    </main>
+</body>
+</html>
